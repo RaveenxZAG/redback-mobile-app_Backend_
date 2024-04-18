@@ -25,6 +25,8 @@ class acc_details(models.Model):
     phone_number = models.CharField(max_length=15, null=True, blank=True) 
     image = models.ImageField(null=True, blank=True,upload_to='images/')
 
+
+# Class for Help Center messages
 class messages(models.Model):
     GENERAL_INQUIRY = 'General Inquiry'
     TECHNICAL_SUPPORT = 'Technical Support'
@@ -65,4 +67,4 @@ class messages(models.Model):
     actions = models.CharField(max_length=20, choices=ACTIONS_CHOICES, default=AWAITING_REVIEW)
 
     
-   
+   #TODO: create similar class for messages between the app users we added as friends 
